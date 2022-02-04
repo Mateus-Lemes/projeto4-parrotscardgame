@@ -23,7 +23,15 @@ main {
     justify-content: space-between;
 }
 
-.carta {
+.body-card {
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    transition: all .5s;
+    padding: 10px;
+}
+
+.card {
     width: 117px;
     height: 146px;
     background: #A7E9AF;
@@ -31,10 +39,28 @@ main {
     box-sizing: border-box;
     border-radius: 5px;
     margin-bottom: 34px;
+    backface-visibility: hidden;
 }
 
-.carta img {
+.card img {
     width: 100px;
     height: 100px;
     margin: 24px 7px 22px 10px;
+}
+
+.front {
+    transform: rotateY(180deg);
+    position: relative;
+}
+
+.back {
+    position: absolute;
+}
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.margin {
+    margin: 10px;
 }
